@@ -9,10 +9,6 @@
       "name": "css/vue_app_02.css",
       "path": "/Users/nishantpall/code/django-vue-static-serving/mpa/mpa/static/vue/css/vue_app_02.css"
     },
-    "favicon.ico": {
-      "name": "favicon.ico",
-      "path": "/Users/nishantpall/code/django-vue-static-serving/mpa/mpa/static/vue/favicon.ico"
-    },
     "index.html": {
       "name": "index.html",
       "path": "/Users/nishantpall/code/django-vue-static-serving/mpa/mpa/static/vue/index.html"

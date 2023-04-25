@@ -1,4 +1,3 @@
-const { defineConfig } = require("@vue/cli-service");
 const BundleTracker = require("webpack-bundle-tracker");
 
 const pages = {
@@ -12,7 +11,7 @@ const pages = {
 	},
 };
 
-module.exports = defineConfig({
+module.exports = {
 	pages: pages,
 	filenameHashing: false,
 	productionSourceMap: false,
@@ -39,17 +38,16 @@ module.exports = defineConfig({
 			config.plugins.delete(`prefetch-${page}`);
 		});
 
-		config.plugin("BundleTracker").use(BundleTracker, [{ filename: "../vue_frontend/webpack-stats.json" }]);
+		config.plugin("BundleTracker").use(BundleTracker, [{ filename: "webpack-stats.json" }]);
 
 		config.resolve.alias.set("__STATIC__", "static");
 
-		config.devServer
-			.public("http://localhost:8080")
-			.host("localhost")
-			.port(8080)
-			.hotOnly(true)
-			.watchOptions({ poll: 1000 })
-			.https(false)
-			.headers({ "Access-Control-Allow-Origin": ["*"] });
+		// config.devServer.public("http://localhost:8080");
+		// 	.host("localhost")
+		// 	.port(8080)
+		// 	// .hotOnly(true)
+		// 	// .watchOptions({ poll: 1000 })
+		// 	.https(false)
+		// 	.headers({ "Access-Control-Allow-Origin": ["*"] });
 	},
-});
+};
