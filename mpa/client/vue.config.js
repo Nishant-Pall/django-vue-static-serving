@@ -5,10 +5,6 @@ const pages = {
 		entry: "./src/main.js",
 		chunks: ["cunk_vendors"],
 	},
-	vue_app_02: {
-		entry: "./src/newhampshir.js",
-		chunks: ["cunk_vendors"],
-	},
 };
 
 module.exports = {
